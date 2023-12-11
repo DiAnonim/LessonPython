@@ -4,38 +4,38 @@
 #иначе Invalid login or password. Правильность логина не зависит от 
 #(Логин должен быть user, пароль - qwerty) 
 
-#log = input()
-#pas = input()
+log = input()
+pas = input()
 
-#def Check():
-#    if log == "user" and pas == "qwerty": print("Authentication completed")
-#    else: print("Invalid login or password")
+def Check():
+    if log == "user" and pas == "qwerty": print("Authentication completed")
+    else: print("Invalid login or password")
 
-#Check()
+Check()
 
 
 #Напишите программу обмена валют, 
 #где я ввожу сумму в тенге и выбираю на какую валюту хочу перевести. 
 #(Курс USD – 420, EUR – 510, RUB - 5.8).
 
-#tenge = float(input("Введите сумму в тенге: "))
+tenge = float(input("Введите сумму в тенге: "))
 
-#valuta = input("Выберите валюту (USD, EUR, RUB): ")
+valuta = input("Выберите валюту (USD, EUR, RUB): ")
 
-#exchangeRates = {'USD': 420, 'EUR': 510, 'RUB': 5.8}
+exchangeRates = {'USD': 420, 'EUR': 510, 'RUB': 5.8}
 
-#def currency_exchange(t, v):
-#    if v not in exchangeRates:
-#        print("Неверный выбор.")
-#        return
+def currency_exchange(t, v):
+    if v not in exchangeRates:
+        print("Неверный выбор.")
+        return
 
-#    exchangeRates = exchangeRates[v]
-#    result_amount = t / exchangeRates
+    exchangeRates = exchangeRates[v]
+    result_amount = t / exchangeRates
 
-#    print(f'{t} тг = {result_amount:.2f} {v}.')
+    print(f'{t} тг = {result_amount:.2f} {v}.')
 
 
-#currency_exchange(tenge, valuta)
+currency_exchange(tenge, valuta)
 
 
 
@@ -46,11 +46,11 @@
 #стоимость пиццы (p) и зарплата Пети (m), а выводится «Да»,
 #если он сможет позволить себе покупку, а иначе – «Нет». 
 
-#def Expenses(s, p, m):
-#    if(m<s+p): print("No")
-#    else: print("Yes")
+def Expenses(s, p, m):
+    if(m<s+p): print("No")
+    else: print("Yes")
 
-#Expenses(500, 600, 2000)
+Expenses(500, 600, 2000)
 
 
 #Паша очень любит кататься на общественном транспорте, а получая билет, 
@@ -61,44 +61,44 @@
 #На вход программе подаётся строка из шести цифр.
 #Выводить нужно только слово "Счастливый" или "Обычный", с большой буквы.
 
-#def ticket(s):
-#    res1 = int(s[0]) + int(s[1]) + int(s[2])
-#    res2 = int(s[3]) + int(s[4]) + int(s[5])
+def ticket(s):
+    res1 = int(s[0]) + int(s[1]) + int(s[2])
+    res2 = int(s[3]) + int(s[4]) + int(s[5])
 
-#    if res1 == res2: print("Счастливый")
-#    else: print("Обычный")
+    if res1 == res2: print("Счастливый")
+    else: print("Обычный")
 
 
 
-#ticket("090234")
+ticket("090234")
 
 
 #По данному натуральном n вычислите сумму 1!+2!+3!+...+n!.
 #В решении этой задачи можно использовать только один цикл.
 #Пользоваться математической библиотекой math в этой задаче запрещено
 
-#def calFactorialSum(n):
-#    res = 0
-#    fact = 1
+def calFactorialSum(n):
+    res = 0
+    fact = 1
 
-#    for i in range(1, n + 1):
-#        fact *= i
-#        res += fact
+    for i in range(1, n + 1):
+        fact *= i
+        res += fact
 
-#    return res
+    return res
 
 
 #По данному натуральному n ≤ 9 выведите лесенку из n ступенек,
 #i-я ступенька состоит из чисел от 1 до i без пробелов.
 
 
-#def ladderNumbers(n):
-#    for i in range(1, n+1):
-#        for j in range(1, i + 1):
-#            print(j, end="")
-#        print()
+def ladderNumbers(n):
+    for i in range(1, n+1):
+        for j in range(1, i + 1):
+            print(j, end="")
+        print()
 
-#ladderNumbers(3)
+ladderNumbers(3)
 
 
 #Для настольной игры используются карточки с номерами от 1 до N. 
@@ -106,19 +106,19 @@
 #Дано число N, далее N − 1 номер оставшихся карточек (различные числа от 1 до N).
 #Программа должна вывести номер потерянной карточки.
 
-#N = int(input("Введите число: "))
+N = int(input("Введите число: "))
 
-#cards = list(map(int, input("Введите номера карточек через пробел: ").split()))
+cards = list(map(int, input("Введите номера карточек через пробел: ").split()))
 
-#def findCard(N, cards):
-#    resSum = N * (N + 1) // 2
-#    remainingSum = sum(cards)
-#    missingCard = resSum - remainingSum
-#    return missingCard
+def findCard(N, cards):
+    resSum = N * (N + 1) // 2
+    remainingSum = sum(cards)
+    missingCard = resSum - remainingSum
+    return missingCard
 
-#missingCard = findCard(N, cards)
+missingCard = findCard(N, cards)
 
-#print(f"Потерянная карточка: {missingCard}")
+print(f"Потерянная карточка: {missingCard}")
 
 
 #По данному целому числу N распечатайте все квадраты натуральных чисел, 
@@ -130,7 +130,7 @@ def square(N):
         print(i**2)
         i += 1
 
-N = int(input("Введите целое число N: "))
+N = int(input("Введите целое число: "))
 
 square(N)
 
