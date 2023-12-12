@@ -4,7 +4,7 @@
 #Если нечетных чисел больше, чем четных, вывод должен быть «Нет»,
 #в остальных ключах «Да». 
 
-#import random
+import random
 
 def createList(n):
     lst = [random.randint(1, 100) for _ in range(n)] 
