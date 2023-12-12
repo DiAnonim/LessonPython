@@ -43,18 +43,78 @@
 #Написать рекурсивную функцию, которая по заданному целому числу 
 #возвращает n-e число Фибоначчи. Ряд Фибоначчи 0, 1, 1, 2, 3, 5, 8, 13,……
 
-#def fib(n):
-#    if n <= 1:
-#        return n
-#    else:
-#        return fib(n - 1) + fib(n - 2)
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        return fib(n - 1) + fib(n - 2)
 
 
 
 #Напишите функцию, которая проверяет является ли число степенью двойки. Если истинно выведите True, иначе False. 
 
 #def degreeTwo(n):
+#    if n <= 0:
+#        return False
+#    return (n & (n - 1)) == 0
 
+#res = degreeTwo(8)
+
+#print(res)
+
+#Реализовать инженерный калькулятор, для всех арифметических действий, 
+#включая нахождение факториала, Фибоначчи, и всех тригонометрических функций, также возведения числа в степени. 
+#В ходе решения, допустимо использования модуля math, функции 
+#определяемой пользователем, рекурсивной функции и лямбда-функции. 
+#Реализуйте диалог с пользователем. 
+
+
+
+
+import math
+
+
+while True:
+    print("Select an action")
+    print("(+, -, /, *)")
+    print("(factorial, fibonacci, degree)")
+    choice = input()
+
+    if choice == "+" or choice == "-" or choice == "/" or choice == "*":
+
+        print("(enter two number)")
+        n1 = input()
+        n2 = input()
+
+        if choice == "+":
+            res = int(n1) + int(n2)
+            print(res)
+
+        elif choice == "-":
+            res = int(n1) - int(n2)
+            print(res)
+
+        elif choice == "/":
+            if(int(n2) < 0): print("you can't divide by zero")
+            else:
+                res = int(n1) - int(n2)
+                print(res)
+
+        elif choice == "*":
+            res = int(n1) - int(n2)
+            print(res)
+    else:
+        if(choice == "fibonacci"):
+            print("(enter two number)")
+            n1 = input()
+            res = fib(n1)
+            print(f"{n1}-е число Фибоначчи: {res}")
+        if(choice == "degree"):
+            print(int(math.pow(2, 3)))
+
+
+
+    
 
 
 
