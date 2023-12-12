@@ -6,37 +6,37 @@
 
 #import random
 
-#def createList(n):
-#    lst = [random.randint(1, 100) for _ in range(n)] 
-#    print(lst)
+def createList(n):
+    lst = [random.randint(1, 100) for _ in range(n)] 
+    print(lst)
 
-#    cnt1 = cnt2 = 0;
+    cnt1 = cnt2 = 0;
 
-#    for i in lst:
-#        if i % 2 == 0: cnt1 += 1
-#        else: cnt2 += 1
+    for i in lst:
+        if i % 2 == 0: cnt1 += 1
+        else: cnt2 += 1
     
-#    if(cnt1>cnt2): print("YES")
-#    else: print("NO")
+    if(cnt1>cnt2): print("YES")
+    else: print("NO")
 
-#createList(5)
+createList(5)
 
 
 
 #Создайте вложенный список размером 3*3 через функцию. 
 #И посчитайте сумму элементов главной диагонали. 
 
-#def diagonal():
-#    s1 = input().split(" ")
-#    s2 = input().split(" ")
-#    s3 = input().split(" ")
+def diagonal():
+    s1 = input().split(" ")
+    s2 = input().split(" ")
+    s3 = input().split(" ")
 
-#    lst = [s1, s2, s3]
+    lst = [s1, s2, s3]
 
-#    print(int(lst[0][0]) + int(lst[1][1]) + int(lst[2][2]))
+    print(int(lst[0][0]) + int(lst[1][1]) + int(lst[2][2]))
 
 
-#diagonal()
+diagonal()
 
 
 
@@ -53,14 +53,14 @@ def fib(n):
 
 #Напишите функцию, которая проверяет является ли число степенью двойки. Если истинно выведите True, иначе False. 
 
-#def degreeTwo(n):
-#    if n <= 0:
-#        return False
-#    return (n & (n - 1)) == 0
+def degreeTwo(n):
+    if n <= 0:
+        return False
+    return (n & (n - 1)) == 0
 
-#res = degreeTwo(8)
+res = degreeTwo(8)
 
-#print(res)
+print(res)
 
 #Реализовать инженерный калькулятор, для всех арифметических действий, 
 #включая нахождение факториала, Фибоначчи, и всех тригонометрических функций, также возведения числа в степени. 
@@ -80,37 +80,46 @@ while True:
     print("(factorial, fibonacci, degree)")
     choice = input()
 
-    if choice == "+" or choice == "-" or choice == "/" or choice == "*":
+    if choice == "+" or choice == "-" or choice == "/" or choice == "*" or choice == "degree":
 
         print("(enter two number)")
-        n1 = input()
-        n2 = input()
+        n1 = int(input())
+        n2 = int(input())
 
         if choice == "+":
-            res = int(n1) + int(n2)
+            res = n1 + n2
             print(res)
 
         elif choice == "-":
-            res = int(n1) - int(n2)
+            res = n1 - n2
             print(res)
 
         elif choice == "/":
-            if(int(n2) < 0): print("you can't divide by zero")
+            if(n2 < 0): print("you can't divide by zero")
             else:
-                res = int(n1) - int(n2)
+                res = n1 / n2
                 print(res)
 
         elif choice == "*":
-            res = int(n1) - int(n2)
+            res = n1 * n2
             print(res)
+
+        elif(choice == "degree"):
+            print(int(math.pow(n1, n2)))
     else:
+        print("(enter number)")
+        n1 = int(input())
+
         if(choice == "fibonacci"):
-            print("(enter two number)")
-            n1 = input()
             res = fib(n1)
             print(f"{n1}-е число Фибоначчи: {res}")
-        if(choice == "degree"):
-            print(int(math.pow(2, 3)))
+
+        elif(choice == "factorial"):
+            res = 1
+            for i in range(1, n1 + 1):
+                res *= i
+            print(f"Факториал {res}")
+        
 
 
 
