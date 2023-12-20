@@ -146,10 +146,6 @@ def searchPhoneNumber(numb):
 phoneNumber = input("Enter Phone number: ")
 
 print(searchPhoneNumber(phoneNumber))
-#if searchPhoneNumber(phoneNumber):
-#    print("Формат телефонного номера верный.")
-#else:
-#    print("Неверный формат телефонного номера.")
 
 
 
