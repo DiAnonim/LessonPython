@@ -37,7 +37,7 @@ print(newLst)
 
 def divisibleSeven(n):
     for i in range(0, n + 1, 7):
-        yield i
+        yield i 
 
 n = 50
 for num in divisibleSeven(n):
