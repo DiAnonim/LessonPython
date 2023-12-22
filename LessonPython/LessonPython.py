@@ -9,16 +9,16 @@
 # изучите сообщение об ошибке. В Python есть специальное исключение для ситуации, если тип переданного значения не соответствует ожиданиям.
 
 
-#def plus_two(number):
-#    try:
-#        result = 2 + number
-#        print(result)
-#    except TypeError:
-#        print("Ожидаемый тип данных — число!")
+def plus_two(number):
+    try:
+        result = 2 + number
+        print(result)
+    except TypeError:
+        print("Ожидаемый тип данных — число!")
 
 
-#plus_two(3)
-#plus_two("abc")
+plus_two(3)
+plus_two("abc")
 
 
 # Напишите программу, которая позволяет получить доступ к элементу массива,
