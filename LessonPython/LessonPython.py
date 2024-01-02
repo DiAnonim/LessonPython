@@ -70,12 +70,3 @@ def total_volume(containers):
     return total
 
 
-# Пример использования
-box1 = Box(2, 3, 4)
-cylinder1 = Cylinder(1, 5)
-box2 = Box(3, 4, 5)
-
-containers = [box1, cylinder1, box2]
-
-total_container_volume = total_volume(containers)
-print("Total volume of all containers:", total_container_volume)
