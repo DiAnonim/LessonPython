@@ -241,10 +241,3 @@ class Ellipse(Shape):
                     ellipses.append(cls(color, topLeftX, topLeftY, majorAxis, minorAxis))
         return ellipses
 
-
-square = Square("yellow", 0, 0, 5)
-rectangle = Rectangle("orange", 2, 3, 6, 4)
-
-# Вызываем методы show() для каждой фигуры
-square.show()
-rectangle.show()
